@@ -41,3 +41,31 @@ pic.addEventListener('click', toggleRound); // everytime we click, it will run t
 //the dom will tell us true or false as we click to toggle
 
 // classList will give us utility function/methos for working with it. It's somewhat new.
+
+// attributes are anything that is provided to an element as an additional info. So things like classes, source
+// custom attribute and data attribute 
+pic.alt = 'Cute pup'; //setter
+
+// window.addEventListener('load', function(){
+//     console.log(pic.naturalWidth); //getter
+// });
+
+pic.width = 200;
+
+//pic.setAttribute('pin-is-smart', 'REALLY CUTE PUP'); // in real life we don't use it
+//What is the difference betwee setAttribute and pic.alt = 'Cute pup';
+// setAttribute will also work things that is non standard. We have html as an spec and you all have all of your standard attribute like atl and title
+// and width and height and source and all of those good things.  
+// Don't ever just make your own attribute. 
+// data
+//console.log(pic.getAttribute('alt'));
+
+// we put javascript at the bottom in html to wait for everything to be loaded. yes! but the html then goes ahead and 
+// has to make the additional request like downloading images, it doesn't wait for those. If that the case, it has to listen
+// load event either on the window or each individual pics 
+
+const custom = document.querySelector('.custom');
+console.log(custom.dataset); // dataset will give is an object that's full of all the propety values that you have.
+custom.addEventListener('click', function(){
+    alert(`Welcome ${custom.dataset.name} ${custom.dataset.last}`)
+});

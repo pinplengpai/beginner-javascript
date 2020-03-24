@@ -12,7 +12,7 @@ const p = document.createElement('p');
 p.textContent = 'I will be removed';
 document.body.appendChild(p);
 
-p.remove();
+p.remove(); // it will automatically remove
 
 console.log(p); // we still have 'p' in the javascript memory
-document.body.appendChild(p);
+document.body.appendChild(p); //it will add again

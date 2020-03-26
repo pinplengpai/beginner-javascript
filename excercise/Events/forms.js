@@ -33,3 +33,15 @@ signupForm.name.addEventListener('blur',logEvent);
 //keydown: what's the current one is 
 //blur: when it's click out of the form
 //focus: when the mouth click in the form 
+//blur and focus normally use when it shows styling and when it shows specific input
+const photo = document.querySelector('.photo');
+function handlePhotoClicked(){
+    if(event.type === 'click' || event.key === 'Enter') {
+        console.log('you clicked the button');
+    }
+}
+
+photo.addEventListener('click', handlePhotoClicked);
+photo.addEventListener('keyup', handlePhotoClicked);
+
+//go to Keycode.info will give the info about key

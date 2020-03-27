@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>If Statements</title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+
+  * empty array
+  * empty object
+
+  <h2>truthy values </h2>
+  * 1
+  * -10
+  * full string
+  * a string of "0"
+
+  <h2>falsy values</h2>
+  * 0
+  * undefined variable
+  * Variable set to null
+  * a variable set to `"hello" - 10` NaN
+  * empty string
+
+  <script>
+    
+    // if (10 > 2) {
+    //     console.log('yep 1');
+    // } else if (11 >10) {
+    //     console.log('yep 2');
+    // } else if (3 > 1){
+    //     console.log('yep 3');
+    // }
+    //it will sure only the first one that it found true or else need to do dif if statement.
+
+    function slugify(sentence, lowercase) {
+      let slug = sentence.replace(/\s/g, '-');
+      if (lowercase) {
+        return slug.toLowerCase();
+      }
+      //else
+      return slug;
+    }
+
+    const name = 'pin';
+    const last = 'scott';
+
+    if(name === 'pin' && last == 'scott') {
+        console.log('cool name');
+    }
+
+    const isAwesomeName = 'awesome'.includes(name);
+
+    if (isAwesomeName) {
+        console.log('SUPER COOL');
+    }
+
+    //return = return a value from a function and stop that function from running.
+
+  </script>
+</body>
+
+</html>

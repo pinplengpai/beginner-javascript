@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Intervals and Timers</title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+  <script>
+      //timeout: if you want to do something after 5 seconds.
+      //internval: if you want to run something every 5 seconds.
+      function buzzer(){
+          console.log('ENNNNNGGGGG');
+      }
+    //   console.log('Starting');
+    //   setTimeout(buzzer, 500);//it's a globally scope. (window.setTimeout)**it's globally available**
+      //it will comeback to setTimeout only when it's done. It will comeback after it fisnihed everything.
+      //when we wait for 500 millisecond, the rest of javascript will still running.
+    //   console.log('finishing');
+
+      //setInterval(buzzer, 100);//if you use it for animation on the page or use it for checking something every 2 secs
+      //what happens is that, it won't run immediately, it only runs after the first two seconds have elapsed.
+      //there is no option to run right away. except writing it our own.
+
+      function setImmediateInterval(funcToRun, ms){
+          // right away call that function
+          funcToRun(); 
+          // run a regular interval
+          return setInterval(funcToRun, ms);
+      }
+      setImmediateInterval(buzzer, 2000);
+
+      function sayHi() {
+          console.log('Heyyyy');
+      }
+
+    //setImmediateInterval(sayHi, 200);
+
+    function destroy() {
+        document.body.innerHTML = `<p>DESTROYED</p>`;
+    }
+
+    setTimeout(destroy, 5000);
+    //imagine if you have to hit the save button within two seconds or something is going to happen.
+    
+    const bombTimer = setTimeout(destroy, 5000);
+
+    window.addEventListener('click', function(){
+        console.log('You clicked! You saved the world');
+        //??how do I stop?
+        clearTimeout(bombTimer); // stop the timer from running
+    });
+
+    const dfasdfInterval = setInterval(function(){
+        console.log('dfasdf');
+        console.log('hehehe');
+    }, 100);
+
+    setTimeout(function(){
+        clearInterval(dfasdfInterval);
+    },3000);
+  </script>
+</body>
+
+</html>

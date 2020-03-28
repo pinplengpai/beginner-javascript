@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <input type="text" name="first" value="wes">
+  <input type="text" name="first" value="pin">
 
   <script src="https://unpkg.com/lodash"></script>
   <script>
@@ -25,6 +25,9 @@
         clothing: {
             shirt: 10,
             pants: 2,
+        },
+        sayHello: function(greeting = 'Hey'){
+            return `${greeting} ${this.name}` 
         }
     };
     pin.job = 'web developer';
@@ -36,6 +39,15 @@
     // const promptToCheck = prompt('what do you want to put?');
     // console.log(promptToCheck);
     // console.log(pin[promptToCheck]);
+    const nameInput = document.querySelector('[name="first"]');
+    // const name = nameInput.value;
+    const name = nameInput? nameInput.value : ''; //we first check if name exist. if nameinput exist we put the name if not we put nothing.
+    console.log(name) 
+    console.log(delete pin.age);  
+
+    //method is just a function that live inside of the object 
+
+
   </script>
 </body>
 

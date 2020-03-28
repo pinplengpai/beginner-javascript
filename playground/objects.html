@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title></title>
+  <link rel="stylesheet" href="../base.css">
+</head>
+
+<body>
+  <input type="text" name="first" value="wes">
+
+  <script src="https://unpkg.com/lodash"></script>
+  <script>
+    //  objects is fundamental block of javascript. Everything in JavaScript is objects.
+    //  objects are used for where the order of the property are not matter 
+    const age = 26 
+    const pin = { //{ } = object //const doesn't mean it can't change. It means that person can't but the property can change
+        name: 'pin', //property : value
+        age,
+        'cool-dude':true,
+        'really cool': true,
+        '777':true,
+        clothing: {
+            shirt: 10,
+            pants: 2,
+        }
+    };
+    pin.job = 'web developer';
+    pin.age = 15;
+    console.log(pin);
+
+    // const pinFroze = Object.freeze(pin);
+    // console.log(pinFroze);
+    // const promptToCheck = prompt('what do you want to put?');
+    // console.log(promptToCheck);
+    // console.log(pin[promptToCheck]);
+  </script>
+</body>
+
+</html>
